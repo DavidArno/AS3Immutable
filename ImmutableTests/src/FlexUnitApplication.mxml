@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This is an auto generated file and is not intended for modification. -->
+
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" minWidth="955" minHeight="600" xmlns:flexui="flexunit.flexui.*" creationComplete="onCreationComplete()">
+	<mx:Script>
+		<![CDATA[
+			import flexUnitTests.Suite;
+			
+			import org.ghostfish.collections.immutable.OrderedListTest;
+			import org.ghostfish.collections.immutable.ProxyWrapperTest;
+			import org.ghostfish.collections.immutable.TupleTest;
+			
+			public function currentRunTestSuite():Array
+			{
+				var testsToRun:Array = new Array();
+				testsToRun.push(flexUnitTests.Suite);
+				testsToRun.push(ProxyWrapperTest);
+				testsToRun.push(OrderedListTest);
+				testsToRun.push(TupleTest);
+				return testsToRun;
+			}
+			
+			
+			private function onCreationComplete():void
+			{
+				testRunner.runWithFlexUnit4Runner(currentRunTestSuite(), "ImmutableTests");
+			}
+			
+		]]>
+	</mx:Script>
+	<flexui:FlexUnitTestRunnerUI id="testRunner">
+	</flexui:FlexUnitTestRunnerUI>
+	
+</mx:Application>
